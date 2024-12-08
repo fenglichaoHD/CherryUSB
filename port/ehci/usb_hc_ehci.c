@@ -1063,7 +1063,6 @@ int usbh_roothub_control(struct usbh_bus *bus, struct usb_setup_packet *setup, u
 
                             while (!(EHCI_HCOR->portsc[port - 1] & EHCI_PORTSC_OWNER)) {
                             }
-                            return ohci_roothub_control(bus, setup, buf);
                         }
 #endif
                         break;
